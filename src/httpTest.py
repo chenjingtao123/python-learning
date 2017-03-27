@@ -7,9 +7,9 @@ url = 'http://act.zb.mi.com/anniversay-user-account/activity/queryInfo?uuid='
 def query_info(uuid):
     url_path = url + str(uuid)
     with request.urlopen(url_path) as f:
-        # print('status:', f.status, f.reason)
-        # for k, v in f.getheaders():
-        #     print('%s: %s' % (k, v))
+        print('status:', f.status, f.reason)
+        for k, v in f.getheaders():
+            print('%s: %s' % (k, v))
         print('Data:', f.read().decode('utf-8'))
 
 
