@@ -21,5 +21,4 @@ while count < 20:
     count += 1
     uuid += count
 
-
 print('thread %s ended.' % threading.current_thread().name)
